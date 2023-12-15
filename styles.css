@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.596), rgba(255, 255, 255, 0.567)),
+  background-image:
+  linear-gradient(rgba(255, 255, 255, 0.596), rgba(255, 255, 255, 0.567)),
   url(/images/snow.jpg);
   background-position: 50%;
   background-attachment: local;
@@ -55,7 +56,12 @@ h3{
   width:250px;
   filter: brightness(75%);
   align-self: start;
-  margin-bottom: 80px
+  margin-bottom: 80px;
+  transition: transform 0.3s, cursor 0.3s
+}
+.preview:hover {
+  transform: scale(105%);
+  cursor:pointer
 }
 .button {
  text-decoration: none;
@@ -80,13 +86,18 @@ p {
   font-size: 1.1rem;
   margin-bottom: 20px
 }
-@media (max-width: 576px) {
-  #main-container {
-  grid-template-columns: 1fr 1fr
-  }
-}
 @media (max-width: 900px) {
   #main-container {
     grid-template-columns: 1fr 1fr 1fr
+    }
+    @media (max-width: 576px) {
+      #main-container {
+      grid-template-columns: 1fr 1fr
+      }
+    }
+    @media (max-width: 350px) {
+      #main-container {
+        grid-template-columns: 1fr;
+      }
     }
 }
