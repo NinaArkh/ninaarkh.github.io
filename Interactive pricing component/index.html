@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive pricing component </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <style id="range-track-style"> 
+  </style>
+</head>
+
+<body>
+  <div id="main-container">
+    <div id="container-both"> 
+      <div id="first-container">
+        <img src="/assets/pattern-circles.svg">
+        <h2>
+          Simple, traffic-based pricing
+        </h2>
+        <p id="title">
+          Sign-up for our 30-day trial. 
+          No credit card required.
+        </p>
+      </div>
+
+      <div id="second-container">
+
+        <div id="child-container">
+
+          <p id="pageviews">
+          <output id="output1"> 10K </output>
+          PAGEVIEWS
+          </p>
+
+          <div id="div-range">
+          <input type='range' id="range" min="1" max="5" step="1" value="3" oninput='updatePrice()'>
+          </div>
+          <!--
+            value означает, на каком месте по умолчанию будет находится ползунок
+          -->
+
+          <p id="price-text">
+          <span id="price"> $ 16 </span>
+          / month
+          </p>
+        </div>
+        
+        <p id="billing">
+          Monthly Billing
+        <input type="checkbox" id="toggle" onclick="discount()">
+        Yearly Billing 
+        <span id="discount">
+          -25%
+        </span>
+      </p>
+
+      <hr>
+      <div id="div-list"> 
+      <ul>
+        <li> Unlimited websites </li>
+        <li> 100% data ownership </li>
+        <li> Email reports </li>
+      </ul>
+      
+        <button> Start my trial </button>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"> </script>
+
+</body>
+</html>

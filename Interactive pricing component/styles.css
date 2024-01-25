@@ -1,0 +1,227 @@
+body {
+  height: 3000px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  background-color: hsl(224, 65%, 95%);;
+}
+*, *:after, *::before {
+  box-sizing: border-box
+}
+p {
+  color: hsl(225, 20%, 60%)
+}
+
+#main-container {
+  width: 350px;
+  padding-bottom: 100px;
+  margin: auto
+}
+#first-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color:  hsl(227, 35%, 25%);
+  display:block
+}
+img {
+  position: absolute;
+}
+
+#second-container {
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  padding: 10px;
+  padding-top: 20px;
+  box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.2)
+}
+#child-container {
+  display: flex;
+  flex-direction: column;
+}
+#pageviews {
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 12px
+}
+#div-range {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#range {
+  -webkit-appearance: none;
+  width: 80%;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: hsl(224, 65%, 95%);
+}
+
+#range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height:10px;
+  border-radius: 20px;
+}
+
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  background-color: hsl(174, 86%, 45%);
+  width:35px;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: -13px;
+  box-shadow: 2px 3px 10px hsla(174, 86%, 45%, 0.536);
+  background-image: url("/assets/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#price-text {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#price {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  font-size: 28px;
+}
+#billing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 30px;
+  font-size: 12px
+}
+#toggle {
+  -webkit-appearance: none;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: hsl(223, 50%, 87%);
+  transition: background 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+#toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: white;
+  transition: left 0.3s
+}
+#toggle:checked::after{
+  left: 70%;
+}
+#toggle:checked {
+background-color: hsl(15, 100%, 70%)
+}
+#discount {
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 10px;
+  padding: 5px 5px;
+  font-size: 12px;
+  color: hsl(15, 100%, 70%);
+  font-weight: 800
+}
+hr {
+  background-color: hsl(223, 50%, 87%);
+  border: none;
+  height: 0.7px
+}
+#div-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ul {
+  line-height: 2;
+  padding: 0px;
+  color: hsl(225, 20%, 60%);
+  list-style: none
+}
+ul li::before {
+  content: '\2713';
+  padding-right: 5px;
+  color: hsl(174, 86%, 45%);
+  font-weight: 600
+}
+
+button {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(227, 87%, 91%);
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 50px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  transition: background-color 0.3s, cursor 0.3s
+}
+button:hover{
+background-color: hsl(228, 33%, 17%);
+cursor: pointer
+}
+
+@media (min-width: 550px) {
+  #main-container {
+    width: 100%;
+  }
+  #container-both {
+    width: 500px;
+    margin: auto
+  }
+  #second-container {
+    margin: 0px;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 0px
+  }
+  #child-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #pageviews, #price-text {
+    order: -1; 
+    margin-bottom: 0px;
+  }
+  #pageviews {
+    margin-bottom: -20px;
+  }
+  #div-range {
+    flex-basis: 100%;
+    margin-bottom: 30px
+  }
+  #billing {
+    text-align: center
+  }
+  #div-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
