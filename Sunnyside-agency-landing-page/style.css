@@ -48,16 +48,28 @@ body {
   background-color:hsl(51, 100%, 49%);
   cursor: pointer
 }
+.blue-picture {
+  position: relative;
+  z-index: -1
+}
 .title2 {
   position: absolute;
-  top: 40%;
   left: 50%;
+  top: 30%;
   transform: translate(-50%, -110%);
   font-weight: bold;
   letter-spacing: 8px;
   color: white;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
+}
+#arrow {
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 25vh;
+  transform: translate(-25%, -35%);
+  margin-top: 20px
 }
 #em1 {
 text-decoration: underline;
@@ -74,13 +86,6 @@ text-decoration-color: hsla(51, 100%, 49%, 0.537);
   height: 100%;
   object-fit: contain;
   display: flex
-}
-#arrow {
-  width: 38px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-25%, -35%)
 }
 .section2, .section3 {
   text-align: center;
@@ -207,11 +212,13 @@ footer h3 {
     justify-content: space-between;
     font-size: 15px;
     margin-top: 30px;
-    margin-right: 20px
+    margin-right: 80px
   }
   #header p{
     padding: 5px 10px;
-    border-radius: 10px
+    border-radius: 10px;
+    font-size: 1.4rem;
+    margin-right: 10px
   }
   #header p:hover {
     cursor: pointer;
@@ -220,10 +227,10 @@ footer h3 {
   #contact2 {
     background-color: white;
     color: black;
-    margin-top: 15px;
+   vertical-align: top;
   }
-  .title2 {
-    top: 35%
+  #arrow {
+    bottom: 50%;
   }
   .egg {
     width: 50%;

@@ -1,0 +1,72 @@
+body{
+  font-size: 48px;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0;
+  background: rgb(255, 254, 250);
+}
+#top-section{
+  height: 50%;
+}
+main {
+  width: 400px;
+  height: 500px;
+  box-shadow: 1px 2px 8px rgb(0,0,0, 0.4);
+  margin-left: 20px;
+  background: linear-gradient(#53ced6, #dc6ded);
+  color: rgb(248, 240, 247);
+  margin: auto;
+  margin-top: 50px
+}
+.calculator-display {
+  padding-right: 30px;
+  font-size: 50px;
+  display: flex;
+  justify-content: end;
+  overflow: hidden
+}
+#bottom-section{
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center; 
+}
+.grid-item{
+  transition: background-color 0.3s, cursor 0.3s;
+  padding-bottom: 5px
+}
+.grid-item:hover {
+  background-color:#72d8df;
+  cursor: pointer
+}
+button{
+  border: none;
+  background-color: #e5cfff;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, cursor 0.3s
+}
+button:hover{
+  cursor: pointer;
+  background-color: #c4a8e6;
+}
+
+.second-color-theme-top{
+background-image: linear-gradient(#489b82, #84e4bc);
+color: white
+}
+.second-color-theme-bottom{
+  background-color: white;
+  color: rgb(40, 39, 51);
+  border-radius: 6px 6px 0px 0px
+}
+.second-color-theme-main{
+  background: white
+}
+.second-color-theme-grid:hover {
+  background-color:#6dccb0;
+}

@@ -1,15 +1,16 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-image:
-  linear-gradient(rgba(255, 255, 255, 0.596), rgba(255, 255, 255, 0.567)),
+  linear-gradient(rgba(255, 255, 255, 0.655), rgba(255, 255, 255, 0.567)),
   url(/images/snow.jpg);
   background-position: 50%;
   background-attachment: local;
   background-size:cover;
   filter:brightness(120%);
-  height: 3000px;
   position: relative;
   box-sizing: border-box;
+  color:#2a3942;
+  padding-bottom: 15rem
 }
 *, *::after, *::before {
   box-sizing: border-box
@@ -18,14 +19,47 @@ h2 {
   text-align: center;
   margin-top: 40px;
   font-size: 2.2rem;
-  color:#353935;
+ 
 }
+.title, .subtitle {
+  text-align: center;
+  margin: 1rem;
+}
+.subtitle {
+  margin-top: 2rem
+}
+.skillset {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1rem
+}
+.skillset div {
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.767), 
+  1px 2px 4px rgba(241, 193, 193, 0.767);
+  padding: 1vh 3vw;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px
+}
+footer {
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.767), 
+  1px 2px 4px rgba(241, 193, 193, 0.767);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 70px
+}
+footer div{
+  margin-top: 20px;
+  font-size: 18px
+}
+
 h3{
   margin-left: 30px;
   margin-top: 70px;
   margin-bottom: 50px;
   font-size: 1.7rem;
-  color: #353935;	
 }
 
 #signature {
@@ -52,12 +86,22 @@ h3{
   0px 0px 50px rgb(255, 255, 255),
   0px 0px 30px rgb(159, 43, 104)
 }
+.grid-item p {
+  font-weight: bold;
+  display: inline-block;
+}
+.react-logo {
+  width: 35px;
+  filter: saturate(150%)
+}
 .preview {
   width:250px;
-  filter: brightness(75%);
+  filter: brightness(80%);
   align-self: start;
   margin-bottom: 80px;
-  transition: transform 0.3s, cursor 0.3s
+  transition: transform 0.3s, cursor 0.3s;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.2)
 }
 .preview:hover {
   transform: scale(105%);
@@ -86,6 +130,21 @@ p {
   font-size: 1.1rem;
   margin-bottom: 20px
 }
+footer {
+  padding-left: 1rem
+}
+footer h3 {
+  padding: 0px;
+  margin: 40px 0px 0px 0px
+}
+footer p{
+  text-indent: 5px
+}
+.contact-info {
+  padding-bottom: 100px
+}
+
+
 @media (max-width: 900px) {
   #main-container {
     grid-template-columns: 1fr 1fr 1fr

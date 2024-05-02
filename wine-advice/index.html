@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine advice generator </title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1> Wine generator </h1>
+  <div id="pic1">
+    <img id="img-pic1" src='/wine-advice/assets/header.jpg'   alt="бочонок вина">
+  </div>
+
+  <h2> Выбери вид вина </h2>
+  <section>
+    
+    <dialog class="message">
+      <form>
+        Ищем лучшее вино для вас ❤
+      </form>
+    </dialog>
+
+    <dialog class="wine-content">
+      <form method="dialog">
+        <img class="wine-picture" alt="изображение вина"> 
+        <p class="title"> text </p>
+        <p class="winery"> text </p>
+        <p class="rating"> text </p>
+        <button id="close-button"> X </button>
+      </form>
+    </dialog>
+
+    <article>
+      Белое 
+      <img id="whites" class="wine-selection" src="/wine-advice/assets/white-wine" alt="белое вино">
+    </article>
+
+    <article> 
+      Красное 
+      <img  id="reds" class="wine-selection" src="/wine-advice/assets/red-wine.png" alt="красное вино">
+      <p class="title"> </p>
+      <p class="winery"></p>
+      <p class="rating"></p>
+    </article>
+
+    <article> 
+      Розовое 
+      <img id="rose" class="wine-selection" src="/wine-advice/assets/rose-wine.png" alt="розовое вино">
+      <p class="title"> </p>
+      <p class="winery"></p>
+      <p class="rating"></p>
+    </article>
+
+    <article> 
+      Игристое 
+      <img id="sparkling" class="wine-selection" src="/wine-advice/assets/sparkling-wine.png" alt="игристое вино">
+      <p class="title"> </p>
+      <p class="winery"></p>
+      <p class="rating"></p>
+    </article>
+
+    <article>
+      Десертное
+      <img id="dessert" class="wine-selection" src="/wine-advice/assets/dessert-wine.png" alt="десертное вино">
+      <p class="title"> </p>
+      <p class="winery"></p>
+      <p class="rating"></p>
+    </article>
+
+    <article>
+      Крепленое
+      <img id="port" class="wine-selection" src="/wine-advice/assets/port-wine.png" alt="крепленое вино">
+      <p class="title"> </p>
+      <p class="winery"></p>
+      <p class="rating"></p>
+    </article>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

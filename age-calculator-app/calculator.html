@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator App </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calculator.css">
+  <link rel="icon" type="image" sizes="32x32" href="/assets/favicon-32x32.png">
+</head>
+
+<body>
+  <main>
+    <div id="main-container">
+      <div class="top-section"> 
+        <div>
+          <p> DAY </p>
+          <input class="input-field" type="text" maxlength="2" id="day">
+          <p id="message"></p>
+        </div>
+        <div>
+          <p> MONTH </p>
+          <input class="input-field" type="text" maxlength="2" id="month">
+          <p id="message2"></p>
+        </div>
+        <div>
+          <p> YEAR </p>
+          <input class="input-field"  type="text" maxlength="4" id="year">
+          <p id="message3"></p>
+        </div>
+    </div>
+      <hr>
+      <img id="arrow" src="/age-calculator-app/assets/icon-arrow-calculator.png"
+      width="30"
+      height="30"
+      >
+
+      <div id="output"> 
+        <p > 
+          <span id="result-years"> -- </span> years 
+        </p>
+        <p>  
+          <span id="result-months"> -- </span> months
+        </p>
+        <p> 
+          <span id="result-days"> -- </span> days 
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <script src="calculator.js"> </script>
+
+</body>
+</html>

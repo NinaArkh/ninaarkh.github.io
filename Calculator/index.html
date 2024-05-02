@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main>
+    <div id="top-section">
+      <div class="calculator-display">0</div>
+    </div>
+    <div id="bottom-section">
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+      <div class="grid-item operator" data-action="divide">/</div>
+
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item operator" data-action="multiply">*</div>
+      
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item operator" data-action="substract">-</div>
+
+      <div class="grid-item">0</div>
+      <div class="grid-item" data-action="decimal">.</div>
+      <div class="grid-item equal" data-action="equals">=</div>  
+      <div class="grid-item operator" data-action="add">+</div>
+    </div>
+    <button> Изменить цвет </button>
+  </main> 
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+  box-sizing: border-box
+}
+
+*, *::before, *::after {
+  box-sizing: border-box
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+  margin-top: 30px;
+  overflow: hidden
+}
+
+picture img { 
+  width: 400px;
+  border-radius: 10px 10px 0px 0px
+}
+
+#content {
+  background-color: white;
+  padding: 30px 30px;
+  max-width: 400px;
+  border-radius: 0px 0px 10px 10px
+}
+h1{
+  font-family: 'Fraunces', serif;
+  color: hsl(212, 21%, 14%);
+}
+#title {
+  letter-spacing: 10px;
+  font-size: 10px;
+  color: hsl(228, 12%, 48%);
+}
+p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.7
+}
+#price {
+  color: hsl(158, 36%, 37%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Fraunces', serif;
+  display: flex;
+}
+#price2 {
+  text-decoration:line-through;
+  color:  hsl(228, 12%, 48%);
+  font-size: 12px;
+  padding: 10px;
+  align-self: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500
+}
+button {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: cursor 0.2s, background-color 0.2s
+}
+#icon {
+  align-self: center;
+}
+button p {
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
+button:hover {
+  background-color: hsl(158, 39%, 26%);
+  cursor: pointer
+}
+
+@media (min-width: 768px) {
+  main {
+  flex-direction: row;
+  vertical-align:bottom;
+  margin-top: 100px;
+  margin-left: 200px;
+  }
+  picture img { 
+    width: 300px;
+    border-radius: 10px 0px 0px 10px
+  }
+  #content {
+    width: 300px;
+    max-height: 450px;
+    border-radius: 0px 10px 10px 0px
+  }
+  button {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tips calculator </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header> КАЛЬКУЛЯТОР ЧАЕВЫХ </header>
+  <main>
+    <div id="first-section">
+      <form id="bill">
+      <p> Сумма счета </p>
+      <input type="text" placeholder="0">
+      <p id="error-text"></p>
+      </form>
+
+      <p id="tip"> Выберите размер чаевых в % </p>
+      <div id="tip-selection">
+        <div class="item">5%</div>
+        <div class="item">10%</div>
+        <div class="item">15%</div>
+        <div class="item">17%</div>
+        <div class="item">20%</div>
+        <div class="item">25%</div>
+      </div>
+      <form id="number">
+        <p> Количество людей </p>
+        <input type="text" placeholder="0">
+      </form>
+    </div>
+
+    <div id="second-section">
+      <div class="tip-counting"> 
+      <p class="text1"> 
+        Сумма чаевых
+        <span class="text2"> /на человека </span>
+       </p>
+       <div>
+        <p class="price1"> ₽0.00 </p>
+       </div>
+      </div>
+      
+       
+       <div class="tip-counting"> 
+        <div>
+       <p class="text1"> 
+        Сумма счета
+        <span class="text2"> /на человека </span>
+       </p>
+      </div>
+       <div>
+        <p class="price2"> ₽0.00 </p>
+       </div>
+       </div>
+       
+       <button id="reset"> Рассчитать сумму </button>      
+    </div>
+  </main>  
+  <script src="index.js"> </script>
+</body>
+</html>

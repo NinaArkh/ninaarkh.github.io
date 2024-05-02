@@ -1,0 +1,92 @@
+body {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0px;
+  padding: 0px
+}
+.top-section {
+  padding-top: 30px;
+  background-image: url(./assets/pattern-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+  position: relative
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 30px
+}
+#input-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px
+}
+input {
+  border: 1px solid  hsl(0, 0%, 59%);
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+  font-family: "Rubik", sans-serif;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+}
+input:focus{
+  outline: none;
+}
+input::placeholder {
+  font-size: 18px;
+}
+button {
+  background-color:hsl(0, 0%, 17%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: -4px;
+  transition: background-color 0.3s, cursor 0.3s
+}
+button:hover{
+cursor: pointer;
+background-color: rgb(44, 38, 59);
+}
+.middle-section {
+  box-shadow: 1px 2px 7px rgb(0, 0, 0, 0.6);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  background-color: white;
+  border-radius: 6px;
+  margin-left: 20%
+}
+.middle-section span{
+  color: hsl(0, 0%, 59%);
+  font-weight: 500;
+  font-size: 14px
+}
+.middle-section p{
+  font-weight: 700;
+  font-size: 20px
+}
+#map {
+  height: 800px;
+  width: 100%;
+  background: linear-gradient(rgb(255, 255, 255), rgb(196, 242, 242))
+}
+#message {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+.middle-section{
+  flex-direction: column;
+  padding-left: 10px;
+}
+input {
+  width: 200px
+}
+}
