@@ -19,7 +19,6 @@ h2 {
   text-align: center;
   margin-top: 40px;
   font-size: 2.2rem;
- 
 }
 .title, .subtitle {
   text-align: center;
@@ -31,6 +30,7 @@ h2 {
 .skillset {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   font-size: 1rem
 }
 .skillset div {
@@ -40,7 +40,8 @@ h2 {
   border-radius: 4px;
   display: flex;
   align-items: center;
-  margin-right: 10px
+  margin-right: 10px;
+  margin-top: 20px
 }
 footer {
   box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.767), 
@@ -48,11 +49,21 @@ footer {
   width: 50%;
   margin: auto;
   text-align: center;
-  margin-top: 70px
+  margin-top: 70px;
+  padding-left: 1rem;
+  margin-bottom: 100px
 }
 footer div{
   margin-top: 20px;
-  font-size: 18px
+  font-size: 18px;
+  padding-bottom: 10px
+}
+footer h3 {
+  padding: 0px;
+  margin: 40px 0px 0px 0px
+}
+footer p{
+  text-indent: 5px
 }
 
 h3{
@@ -78,6 +89,7 @@ h3{
 }
 .grid-item {
   display: flex;
+  height: 550px;
   flex-direction: column;
   padding: 10px 30px;
   position: relative;
@@ -89,6 +101,7 @@ h3{
 .grid-item p {
   font-weight: bold;
   display: inline-block;
+  margin-bottom: 2rem
 }
 .react-logo {
   width: 35px;
@@ -97,7 +110,6 @@ h3{
 .preview {
   width:250px;
   filter: brightness(80%);
-  align-self: start;
   margin-bottom: 80px;
   transition: transform 0.3s, cursor 0.3s;
   border-radius: 5px;
@@ -130,33 +142,25 @@ p {
   font-size: 1.1rem;
   margin-bottom: 20px
 }
-footer {
-  padding-left: 1rem
-}
-footer h3 {
-  padding: 0px;
-  margin: 40px 0px 0px 0px
-}
-footer p{
-  text-indent: 5px
-}
-.contact-info {
-  padding-bottom: 100px
-}
 
-
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   #main-container {
     grid-template-columns: 1fr 1fr 1fr
     }
-    @media (max-width: 650px) {
-      #main-container {
-      grid-template-columns: 1fr 1fr
-      }
-    }
-    @media (max-width: 500px) {
-      #main-container {
-        grid-template-columns: 1fr;
-      }
+    footer {
+      width: 100%
     }
 }
+  @media (max-width: 650px) {
+    #main-container {
+    grid-template-columns: 1fr 1fr
+    }
+    footer {
+      width: 100%
+    }
+  }
+  @media (max-width: 500px) {
+    #main-container {
+      grid-template-columns: 1fr;
+    }
+  }
