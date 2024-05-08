@@ -15,22 +15,20 @@ button.addEventListener('click', function(e) {
  if(!input.value) {
   error.textContent = 'Поле не должно быть пустым'
  } else if (!regex.test(input.value)) {
-  error.textContent = 'Некорректный IP-адрес'
-  return 
-  // Остановить выполнение функции
+    error.textContent = 'Некорректный IP-адрес'
+    return 
+    // Остановить выполнение 
  } else
-  error.textContent = ''
+    error.textContent = ''
  
   getIP(input.value)
-    .then( data => {
-      fillData(data)
-      console.log(data)
-      latitude = data.lat
-      longitude = data.lon
-
-      console.log('longitude is ' + data.lon)
-      console.log('latitude is ' + data.lat)
-     // initMap()
+    .then(data => {
+      if(!data.ip || !data.city || 
+        !data.timezone.utc ||!data.connection.isp) {
+          throw new Error('Invalid API link')
+      } else
+          fillData(data)
+          console.log(data)
   })
     .catch( err => {
       console.error('Rejected: ', err)
@@ -38,41 +36,25 @@ button.addEventListener('click', function(e) {
 })
   
 const getIP = async (userIP) => {
-  let response = await fetch(`http://ip-api.com/json/?fields=61439`)
+  let response = await fetch(`https://ipwho.is/${userIP}`)
 
-  if(!input.value) {
+  if(input.value) {
     let data = await response.json()
     return data
-  } else 
-    response = await fetch(`http://ip-api.com/json/${userIP}`) 
-  let data = await response.json()
-  return data
-  //fillData(data)
- // initMap()
+  }
 }
 
 function fillData(data) {
-  ip.textContent = data.query
-  city.textContent = data.city
-  time.textContent = data.timezone
-  provider.textContent = data.isp
+  ip.textContent = data.ip
+  city.textContent = data.city + ', ' + data.country
+  time.textContent = data.timezone.utc
+  provider.textContent = data.connection.isp
 }
 
-let result = getIP() // пришел Promise
-result
-  .then(response => {
-    if(!response.query || !response.city || !response.timezone ||!response.isp) {
-      throw new Error('Invalid API link')
-    } else
-      fillData(response)
-     // console.log(response)
-    })
-  .catch(err => {
-    console.log('rejected ', err)
-  })
-// если опечатка в GET-параметрах, придет пустой ответ, а status все равно будет 200 и OK
 
 /*
+let response = await fetch(`http://ip-api.com/json/?fields=61439`)
+
 initMap()
 async function initMap() {
   await ymaps3.ready
