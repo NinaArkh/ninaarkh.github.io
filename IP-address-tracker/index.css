@@ -51,16 +51,19 @@ background-color: rgb(44, 38, 59);
 }
 .middle-section {
   box-shadow: 1px 2px 7px rgb(0, 0, 0, 0.6);
-  padding-top: 20px;
+  padding: 20px 20px 5px 20px;
   display: flex;
   justify-content: space-around;
-  width: 65%;
+  width: 75%;
   position: absolute;
   z-index: 2;
   top: 35%;
+  left: 10%;
   background-color: white;
   border-radius: 6px;
-  margin-left: 20%
+}
+.middle-section div {
+  margin-right: 10px
 }
 .middle-section span{
   color: hsl(0, 0%, 59%);

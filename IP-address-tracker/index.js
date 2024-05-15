@@ -2,12 +2,11 @@ const ip = document.querySelector('#ip')
 const city = document.querySelector('#location')
 const time = document.querySelector('#timezone')
 const provider = document.querySelector('#ISP')
-let button = document.querySelector('button')
-let topDiv = document.querySelector('.top-section')
-let input = document.querySelector('#input-section input')
-let error = document.querySelector('#message')
-let regex = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/
-let latitude, longitude
+const button = document.querySelector('button')
+const topDiv = document.querySelector('.top-section')
+const input = document.querySelector('#input-section input')
+const error = document.querySelector('#message')
+const regex = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/
 
 button.addEventListener('click', function(e) {
   e.preventDefault()
@@ -23,12 +22,12 @@ button.addEventListener('click', function(e) {
  
   getIP(input.value)
     .then(data => {
-      if(!data.ip || !data.city || 
+     /* if(!data.ip || !data.city || 
         !data.timezone.utc ||!data.connection.isp) {
           throw new Error('Invalid API link')
       } else
+      */
           fillData(data)
-          console.log(data)
   })
     .catch( err => {
       console.error('Rejected: ', err)
@@ -36,19 +35,21 @@ button.addEventListener('click', function(e) {
 })
   
 const getIP = async (userIP) => {
-  let response = await fetch(`https://ipwho.is/${userIP}`)
+ // const response = await fetch(`https://ipwho.is/${userIP}`)
+  const response = await fetch(`https://ipapi.co/${userIP}/json`)
 
   if(input.value) {
     let data = await response.json()
+    console.log(data)
     return data
   }
 }
 
 function fillData(data) {
   ip.textContent = data.ip
-  city.textContent = data.city + ', ' + data.country
-  time.textContent = data.timezone.utc
-  provider.textContent = data.connection.isp
+  city.textContent = data.city + ', ' + data.country_name
+  time.textContent = data.timezone
+  provider.textContent = data.org
 }
 
 
