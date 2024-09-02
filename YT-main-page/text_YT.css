@@ -306,16 +306,20 @@ column-gap: 16px
 }
 
 @media (max-width: 550px) {
+ body {
+  padding-left: 10px
+ }
   .video-grid {
-    grid-template-columns: 1fr 
+    grid-template-columns: 1fr;
+    width: 95vw
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
   }
   }
-
-@media (min-width: 550px) and (max-width: 800px) {
-.video-grid {
-  grid-template-columns: 1fr 1fr
-}
-}
 
 @media (min-width: 801px) and (max-width: 999px) {
   .video-grid {
@@ -332,3 +336,11 @@ column-gap: 16px
     font-size: 14px
   }
 }
+
+/*
+@media (min-width: 550px) and (max-width: 800px) {
+.video-grid {
+  grid-template-columns: 1fr 1fr
+}
+}
+*/

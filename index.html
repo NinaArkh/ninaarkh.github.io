@@ -20,14 +20,15 @@
   <section>
     <h3> Навыки </h3>
     <div class="skillset">
+      <div> React </div>
+      <div> Redux </div>
       <div> Javascript </div>
+      <div> Fetch / Axios </div>
       <div> HTML </div>
       <div> CSS </div>
-      <div> React </div>
-      <div> Responsive web design </div>
+      <div> Responsive design </div>
       <div> Git Hub </div>
-      <div> Lighthouse </div>
-      <div> Accessibilty  </div>
+      <div> Accessibilty </div>
     </div>
   </section>
 
@@ -37,21 +38,56 @@
 
   <div id="main-container">
 
-    <div class="grid-item"> 
+    <div class="grid-item social-network"> 
       <p>
-        VK Реклама - Планировщик конверсий
+        Социальная сеть
         <img class="react-logo" src="./images/react-logo.png">
+        <img class="react-logo" src="./images/redux.png">
       </p>
-      <a href="https://ninaarkh.github.io/vk-ads-planner/" target="_blank">
-        <img class="preview" src="images/Preview-14.png" alt="preview">
-      </a>
+      
+      <div class="highlights">
+        <ul>
+          <li> Подключение Redux store для гибкого управления состоянием </li>
+          <li> <b> Паттерн Наблюдатель: </b> использование reducer с нужным action для изменения состояния и передачи его при помощи thunk-функции в компонент, который подписывается на изменения в store.</li>
+          <a href='https://ninaarkh.github.io/social-network/'  target="_blank">
+            <img class="preview social-network" src="images/Preview-16.png" alt="preview">
+          </a>
+          <li> <b> Axios-запросы: </b> 
+            <br><b> GET </b>  для получения профиля пользователя, капчи, списка всех юзеров из API
+           <br>  <b> POST </b> для авторизации, добавления поста на стену, написания сообщения, добавления в друзья  
+           <br> <b> PUT </b> для изменения статуса, аватарки  
+           <br> <b> DELETE </b> для удаления из друзей, log out  
+          </li>
+        
+          <li> <b> Классовые компоненты: </b> применение side effects в методах жизненного цикла </li>
+          <li> useState, useEffect для изменения статуса юзера </li>
+          
+          <li> <b> Lazy-loading: </b> загрузка части компонентов только при переходе юзера в раздел, применение fallback в <b> Suspense </b> </li>
+          <li> Роутинг страниц: <b> react-router-dom </b> (чтение параметров из ссылки useParams; useNavigate для переадресации) </li>
+          <li> <a class='github-link' href="https://github.com/NinaArkh/social-network"> Ссылка на репозиторий </a>  </li>
+        </ul>
+      </div>
+      
+      
     </div>
 
     <div class="grid-item"> 
       <p>
         Генератор мемов
         <img class="react-logo" src="./images/react-logo.png">
+        <img class="react-logo" src='./images/vite.svg'>
       </p>
+
+      
+      <div class="highlights">
+        <ul>
+          <li> Запрос массива мемов в <b>useEffect</b> при изначальном монтировании компоненты</li>
+          <li> выбор случайного изображения - Math.random</li>
+          <li>Более быстрая начальная загрузка при помощи <b> Vite </b> </li>
+          <li> <a class='github-link' href="https://github.com/NinaArkh/memes"> Ссылка на репозиторий </a></li>
+        </ul>
+      </div>
+
       <a href="https://ninaarkh.github.io/memes" target="_blank">
         <img class="preview" src="images/Preview-12.png" alt="preview">
       </a>
@@ -61,6 +97,17 @@
       <p>
         Каталог-рандомайзер вина
       </p>
+
+      
+      <div class="highlights">
+        <ul>
+          <li> <b> Fetch</b>-запросы к Sample API </li>
+          <li> Отображение заглушки до того, как выполнится fetch-запрос </li>
+          <li> <b> Math.floor(Math.random()) </b> : реализация рандомайзера </li>
+          <li> <b> elem.getBoundingClientRect() </b> - отображение согласно координатам окна </li>
+        </ul>
+      </div>
+
       <a href='/wine-advice/index.html'  target="_blank">
         <img class="preview" src='/images/Preview-9.png' alt="preview">
       </a>
@@ -68,8 +115,35 @@
 
     <div class="grid-item"> 
       <p>
+        VK Реклама - Планировщик конверсий
+        <img class="react-logo" src="./images/react-logo.png">
+      </p>
+
+      <div class="highlights">
+        <ul>
+          <li> Отрисовка графиков при помощи <b> Chart.js</b> </li>
+          <li> Прогнозирование конверсий в кампании на основе бюджета </li>
+        </ul>
+      </div>
+
+      <a href="https://ninaarkh.github.io/vk-ads-planner/" target="_blank">
+        <img class="preview" src="images/Preview-14.png" alt="preview">
+      </a>
+    </div>
+   
+
+    <div class="grid-item"> 
+      <p>
         Калькулятор возраста
       </p>
+      
+      <div class="highlights">
+        <ul>
+          <li> Работа с <b>датами </b>: вычисление точного возраста путем перевода текущей даты в <b> ms </b> и вычитания введенной даты </li>
+          <li> Проверка полей день/месяц/год логическим оператором ИЛИ </li>
+        </ul>
+      </div>
+
       <a href="/age-calculator-app/calculator.html" target="_blank">
         <img class="preview" src="images/Preview-7a.png">
       </a>
@@ -79,6 +153,16 @@
       <p>
         Калькулятор чаевых
       </p>
+      
+      <div class="highlights">
+        <ul>
+          <li>
+            <b> Всплытие (event bubbling): </b> установка обработчика на родительском элементе tips для отлова событий от целевых элементов
+          </li>
+          <li> isNaN: проверка введенных данных </li>
+        </ul>
+      </div>
+
       <a href="Tips-calculator/index.html" target="_blank">
         <img class="preview" src="images/Preview-15.png" alt="preview">
       </a>
@@ -88,6 +172,15 @@
       <p>
         Калькулятор
       </p>
+      
+      <div class="highlights">
+        <ul>
+          <li> <b> Event bubbling: </b> обработка клика на всех дочерних элементах </li>
+          <li> Использование <b> data-атрибутов </b>  для хранения и получения данных </li>
+          <li> Переключение цветовых тем </li>
+        </ul>
+      </div>
+
       <a href='/Calculator/index.html' target="_blank">
         <img class="preview" src="images/Preview-10.png" alt="preview">
       </a>
@@ -97,6 +190,15 @@
       <p>
         Лендинг агентства Sunnyside
       </p>
+
+      
+      <div class="highlights">
+        <ul>
+          <li> Сочетание absolute и relative позиционирования </li>
+          <li> Переход к нужному разделу - <b> scrollTo </b> </li>
+        </ul>
+      </div>
+
       <a href="/Sunnyside-agency-landing-page/index.html"
       target="_blank">
         <img class="preview" src="images/Preview-6.png">
@@ -107,6 +209,14 @@
       <p>
         Трекер IP адресов
       </p>
+      
+      <div class="highlights">
+        <ul>
+          <li> Проверка IP-адреса при помощи <b> RegExp </b> на соответствие IPv4  </li>
+          <li> Fetch-запросы - получение данных по API </li>
+        </ul>
+      </div>
+
       <a href='/IP-address-tracker/index.html'  target="_blank">
         <img class="preview" src="images/Preview-13.png" alt="preview">
       </a>
@@ -116,6 +226,15 @@
       <p>
         Главная страница YouTube (клон)
       </p>
+
+      
+      <div class="highlights">
+        <ul>
+          <li> Адапивный дизайн: mobile / tablet / desktop </li>
+          <li> Применение <b> CSS Grid </b> </li>
+        </ul>
+      </div>
+
       <a href='/YT-main-page/YouTube-main-page-clone.html' target="_blank">
         <img class="preview" src="images/Preview-11.png" alt="preview">
       </a>
@@ -125,6 +244,14 @@
       <p>
         Страница подписки на рассылку
       </p>
+      
+      <div class="highlights">
+        <ul>
+          <li> Проверка корректности эл.почты при помощи <b> RegExp </b> </li>
+          <li> Изменение верстки img в мобильной версии </li>
+        </ul>
+      </div>
+
       <a href="/base-apparel-coming-soon-page/index.html" target="_blank">
         <img class="preview" src="images/Preview-1.png" alt="preview">
       </a>
@@ -134,6 +261,14 @@
     <p>
       Оформление подписки 
     </p>
+    
+    <div class="highlights">
+      <ul>
+        <li> Динамическое обновление интерфейса <b> oninput </b> </li>
+        <li> CSS: стилизация ползунка <b> ::-webkit-slider-thumb </b> </li>
+      </ul>
+    </div>
+
     <a href="/interactive-pricing-component/index.html" target="_blank">
       <img class="preview" src="images/Preview-8.png">
     </a>
@@ -146,8 +281,10 @@
   <footer>
    <h3> Контактная информация </h3> 
    <div id="contact-info"> nina.arkhipova.18@mail.ru </div>
+   <a class="github-link" href="https://github.com/NinaArkh/ninaarkh.github.io"> Репозиторий на Github </a>
   </footer>
 
+  <script src="index.js"></script>
 </body>
 
 <!--
