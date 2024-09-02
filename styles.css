@@ -36,8 +36,9 @@ h2 {
 .skillset div {
   box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.767), 
   1px 2px 4px rgba(241, 193, 193, 0.767);
-  padding: 1vh 3vw;
+  padding: 10px 30px;
   border-radius: 4px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   margin-right: 10px;
@@ -70,8 +71,14 @@ footer p{
 h3{
   margin-left: 30px;
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   font-size: 1.7rem;
+}
+.repo-links{
+  font-size: 20px
+}
+.repo-links li {
+  margin-top: 10px
 }
 
 #signature {
