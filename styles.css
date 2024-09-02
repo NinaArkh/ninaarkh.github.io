@@ -75,7 +75,8 @@ h3{
   font-size: 1.7rem;
 }
 .repo-links{
-  font-size: 20px
+  font-size: 20px;
+  margin-bottom: 100px;
 }
 .repo-links li {
   margin-top: 10px
